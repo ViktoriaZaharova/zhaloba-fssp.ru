@@ -1,0 +1,707 @@
+@import "vars"
+
+// advantages
+.advantages
+	margin: 48px 0
+
+.advantages-slider
+	.slide
+		padding: 0 12px
+		height: auto
+	.slick-list
+		margin: 0 -12px
+	.slick-track
+		display: flex
+		align-items: stretch
+
+.advantages-box
+	width: 100%
+	border-radius: 12px
+	background: #FFF
+	display: flex
+	align-items: flex-start
+	padding: 24px
+	height: 100%
+	&__icon
+		@include d-flex
+		border-radius: 48px
+		background: #F4F5F7
+		width: 48px
+		min-width: 48px
+		height: 48px
+		img
+			max-height: 100%
+	&__text
+		width: calc(100% - 48px)
+		padding: 0 0 0 12px
+	h3
+		color: $accent
+		margin: 0 0 8px
+		font-size: 22px
+		font-weight: 600
+	p
+		max-width: 220px
+// advantages end
+
+/*==========	section section-loader ==========*/
+.section-loader
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: 10
+	background: rgba(243, 243, 243, 0.5)
+	-webkit-backdrop-filter: blur(17.5px)
+	backdrop-filter: blur(17.5px)
+	border-radius: 5px
+	padding: 24px 0
+	display: none
+	align-items: center
+	justify-content: center
+	color: #fff
+
+.timer
+	width: 160px
+	height: 160px
+	margin: 0 auto
+	border-radius: 50%
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+	-webkit-box-align: center
+	-ms-flex-align: center
+	align-items: center
+	text-align: center
+	font-size: 28px
+	font-weight: 600
+	color: #fff
+	position: relative
+	z-index: 1
+
+.loader-wrapper
+	width: 100%
+	position: relative
+	&__text
+		text-align: center
+		width: 100%
+		margin: 20px auto 0
+		font-size: 18px
+
+.progress-timer
+	width: 160px
+	height: 160px
+	margin: 0 auto
+	position: relative
+
+.circle
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	top: 0
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	align-items: center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+	-webkit-transform: rotate(-90deg)
+	transform: rotate(-90deg)
+	&__item
+		width: 160px
+		height: 160px
+		position: relative
+	&__item:before
+		content: ""
+		position: absolute
+		left: 50%
+		top: 50%
+		width: 100%
+		height: 100%
+		-webkit-transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%)
+		border: 20px solid #fff
+		border-radius: 50%
+		z-index: -1
+	&__spinner
+		width: 174px
+		height: 174px
+		position: absolute
+		left: 50%
+		top: 50%
+		-webkit-transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%)
+		.path
+			stroke: $accent
+			stroke-linecap: round
+			-webkit-animation: dash 65s linear forwards
+			animation: dash 65s linear forwards
+
+@keyframes dash
+	0%
+		stroke-dasharray: 1, 150
+		stroke-dashoffset: 0
+
+	100%
+		stroke-dasharray: 130, 150
+		stroke-dashoffset: 0
+
+/*==========	section section-loader end	==========*/
+
+// section statistics
+.td-base,
+.td-department
+	width: 26%
+
+.td-sum
+	width: 19%
+// section statistics end
+
+// working	
+.working
+	margin: 48px 0 24px
+
+.working-box
+	p
+		max-width: none
+	.advantages-box__icon
+		width: 80px
+		height: 80px
+		min-width: 80px
+		padding: 15px
+
+// working end	
+
+// .for-whot 	
+.for-whot-box
+	width: 100%
+	height: 100%
+	background: #fff
+	padding: 24px
+	display: flex
+	flex-direction: column
+	h3
+		font-weight: 600
+		margin: 0 0 14px
+		max-width: 202px
+	.btn
+		width: 100%
+		margin: auto 0 0
+// .for-whot end	
+
+// reviews 	
+.reviews
+	margin: 24px 0
+	h2
+		margin: 0 0 24px
+
+.reviews-box
+	width: 100%
+	height: 100%
+	background: #fff
+	padding: 24px
+	display: flex
+	flex-direction: column
+	border-radius: 12px
+	&__body
+		line-height: 150%
+		font-size: 14px
+		margin: 0 0 auto
+	&__footer
+		width: 100%
+		display: flex
+		align-items: center
+		margin: 24px 0 0
+	h3
+		font-size: 18px
+		font-weight: 600
+	&__photo
+		@include d-flex
+		border-radius: 50%
+		width: 64px
+		height: 64px
+		margin: 0 8px 0 0
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			border-radius: 50%
+
+.list-rating
+	display: flex
+	align-items: flex-start
+	margin: 8px 0 0
+	li
+		@include d-flex
+		width: 16px
+		height: 16px
+		margin: 0 2px 0 0
+		&:last-child
+			margin: 0
+
+// reviews end	
+
+// question
+.question-box
+	width: 100%
+	padding: 24px
+	background: #fff
+	margin: 0 0 24px
+	border-radius: 12px
+	&:last-child
+		margin: 0
+	h3
+		width: 100%
+		font-weight: 600
+		color: $accent
+		margin: 0 0 14px
+	.box-text
+		font-size: 14px
+		line-height: 150%
+		p
+			margin: 0 0 20px
+			&:last-child
+				margin: 0
+		ol
+			margin: 20px 0
+// question end	
+
+.search-base-wrapper
+	width: 100%
+	color: #fff
+	background: var(--radial-grad, radial-gradient(258.42% 132.04% at 100.00% -0.00%, #5EB788 0%, #479E70 100%))
+	padding: 48px 24px 40px
+	border-radius: 12px
+	.text-title
+		color: #DAECE2
+		font-size: 18px
+		line-height: 150%
+		margin: 24px 0 48px
+		max-width: 1088px
+	.btn-group
+		margin: 26px 0 0
+	.btn-group-link
+		margin: 14px 0 0
+
+.title-wrapper
+	display: flex
+	align-items: center
+	justify-content: space-between
+	h1
+		width: fit-content
+
+.progress-wrapper
+	padding: 11px 24px
+	display: none
+	background: #DAECE2
+	border-radius: 8px
+	width: fit-content
+
+.progress-steps
+	color: $accent
+	text-transform: uppercase
+	font-weight: bold
+	font-size: 16px
+	white-space: nowrap
+
+.label-region .dropdown-menu
+	width: 100%
+	margin: 0
+	max-height: 285px
+	overflow-y: auto
+	padding: 16px 0
+	-webkit-box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05)
+	box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05)
+	border: none
+	border-radius: 4px
+
+.label-region .dropdown-item
+	padding: 6px 16px
+	color: #1f2937
+	font-size: 14px
+
+.label-region .dropdown-menu
+	width: 100%
+	margin: 0
+	max-height: 285px
+	overflow-y: auto
+	padding: 16px 0
+	-webkit-box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05)
+	box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05)
+	border: none
+	border-radius: 4px
+
+.label-region .dropdown-item
+	padding: 6px 16px
+	color: #1f2937
+	font-size: 14px
+
+.input-region
+	background: #fff url("../img/arrow-select.svg") no-repeat calc(100% - 16px) center
+	background-size: 16px
+
+.input-title
+	width: 100%
+	display: flex
+	align-items: center
+	margin: 0 0 6px
+	color: #fff
+	font-size: 13px
+	font-weight: 500
+	line-height: 150%
+
+.input-icon
+	z-index: 1
+	position: absolute
+	top: 50%
+	left: 14px
+	transform: translate(0,-50%)
+	width: 20px
+	height: 20px
+	fill: $accent
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	align-items: center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+
+	&.stroke-none
+		stroke: none
+		fill: $accent
+
+.variable-adjustment
+	font-size: 12px
+	display: flex
+	align-items: center
+	white-space: nowrap
+
+.alert-modal
+	margin: 0 auto 0 6px
+
+.auto-complection
+	display: flex
+	align-items: center
+	color: $accent
+	font-size: 14px
+	text-transform: uppercase
+	margin: 0 0 0 auto
+	padding: 12px 24px
+	border-radius: 8px
+	background: #DAECE2
+	img
+		margin: 0 0 0 8px
+	&:hover
+		background: $yellow
+		color: $accent
+
+.next-step
+	margin: 26px 0 0
+	width: 100%
+
+.form-group-content
+	display: none
+	&.active
+		display: block
+
+.autocomplete-box
+	padding: 0 8px
+	color: $accent
+	font-size: 14px
+	line-height: 150%
+	background: #DAECE2
+	border-radius: 4px
+	margin: 0 0 0 auto
+
+.file-upload-result
+	width: 100%
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	margin: 26px 0 0
+	&__item
+		display: flex
+		align-items: center
+		margin: 10px 24px 0 0
+		padding: 9px 14px 8px
+		min-width: 223px
+		color: #fff
+		border: 1px solid #fff
+		font-size: 12px
+		border-radius: 4px
+
+	&__item:last-child
+		margin-right: 0
+
+	&__icon
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 28px
+		height: 28px
+		margin: 0 6px 0 0
+		fill: #fff
+
+	&__close
+		display: flex
+		align-items: center
+		justify-content: center
+		fill: none
+		stroke: #fff
+		width: 16px
+		height: 16px
+		min-width: 16px
+		margin: 0 0 0 auto
+
+	&__size
+		color: #DAECE2
+
+.label-file
+	width: 100%
+	position: relative
+	cursor: pointer
+	padding: 24px
+	text-align: center
+	background: transparent
+	border: 1px dashed #d0d5dd
+	border-radius: 4px
+	margin: 0 0 10px
+	font-size: 14px
+	line-height: 150%
+	color: #DAECE2
+
+	input
+		display: none
+
+	&__title
+		display: block
+		width: 100%
+		color: #fff
+		margin: 0 auto 8px
+
+	&__description
+		display: block
+		margin: 0 auto
+		max-width: 495px
+
+.label-message
+	margin: 0
+
+.example-item
+	font-size: 14px
+	line-height: 150%
+
+.form-bailiff .subtitle
+	font-size: 18px
+
+.form-bailiff .text-description
+	margin: 40px 0
+	line-height: 150%
+	color: #DAECE2
+
+	p
+		margin: 0 0 20px
+
+	p:last-child
+		margin: 0
+
+.form-bailiff-total
+	position: relative
+	box-shadow: none
+	background: #F4F5F7
+	padding: 40px
+	color: #1F2937
+	line-height: 150%
+	font-size: 14px
+	.details-payments-list
+		font-size: 14px
+		width: 100%
+		li
+			margin: 0 0 12px
+			position: relative
+			z-index: 1
+			display: flex
+			align-items: center
+			justify-content: space-between
+			&::before
+				content: ''
+				position: absolute
+				bottom: 5px
+				left: 0
+				width: 100%
+				height: 1px
+				border-bottom: 1px dashed #D1D7E2
+			&:last-child
+				margin: 0
+		.details-payments-list__name, span
+			position: relative
+			z-index: 1
+			background: #F4F5F7
+
+		.details-payments-list__name
+			padding: 0 10px 0 0
+		span
+			padding: 0 0 0 10px
+			white-space: nowrap
+
+	.total-payments
+		color: #1F2937
+		font-size: 22px
+		font-weight: 600
+
+.details-payments__order-head
+	padding: 0 0 24px
+	margin: 0 0 24px
+	border-bottom: 1px dashed #9CA3AF
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.details-payments__order-footer
+	margin: 24px 0 0
+	padding: 24px 0 0
+	border-top: 1px dashed #9CA3AF
+	width: 100%
+	flex-wrap: wrap
+
+.list-result-information
+	width: 100%
+	color: #DAECE2
+	font-size: 18px
+	line-height: 150%
+
+	li
+		display: flex
+		align-items: flex-start
+		margin: 0 0 24px
+
+	li:last-child
+		margin: 0
+
+	.svg-icon-loader
+		display: none
+
+.load-result .svg-icon-loader
+	display: block
+
+.load-result .svg-icon-check
+	display: none
+
+.svg-icon-check
+	border-radius: 50%
+	width: 24px
+	height: 24px
+	background: #fff
+	padding: 5px
+
+.status-icon
+	display: flex
+	align-items: center
+	justify-content: center
+	stroke: $accent
+	fill: none
+	width: 24px
+	height: 24px
+	min-width: 24px
+	margin: 3px 12px 0 0
+
+	&-block
+		stroke: none
+
+.form-bailiff
+	.btn-group .btn
+		width: fit-content
+		flex: none
+
+	.btn-group-100
+		width: 100%
+		flex-wrap: nowrap
+		.btn
+			&:last-child
+				flex: 1
+
+// contacts
+.section-page
+	color: #191D24
+
+.contacts-page
+	margin: 0 0 77px
+
+.wrapper-page
+	background: #fff
+	width: 100%
+	padding: 40px 64px
+	border-radius: 12px
+	h1
+		margin: 0 0 24px
+	h2
+		margin: 0
+	.box-text
+		font-size: 18px
+		line-height: 150%
+		a
+			color: #191D24
+			&:hover
+				color: $accent
+		.color-accent
+			color: $accent
+			&:hover
+				color: $yellow
+		p
+			margin: 0 0 24px
+			&:last-child
+				margin: 0
+		ul, ol
+			margin: 24px 0
+			li
+				margin: 0 0 8px
+				&:last-child
+					margin: 0
+		h3
+			margin: 0 0 24px
+			font-size: 24px
+		h4
+			font-size: 20px
+			margin: 0 0 20px
+		table
+			margin: 16px 0
+			tr:hover
+				box-shadow: none
+	.color-green
+		color: #30B700
+	.color-red
+		color: #850101	
+
+.section-status
+	.text-title
+		margin: 0 0 8px
+		font-size: 20px
+		font-weight: 600
+		color: #4B5563
+
+.status-description
+	margin: 44px 0 0
+	width: 100%
+	padding: 40px 64px
+	border-radius: 8px
+	h4
+		font-size: 20px
+		font-weight: 600
+		margin: 0 0 16px
+
+.bg-light-green
+	background: #ECFDF5
+
+.bg-light-red
+	background: #FDECEC	
+// contacts end	
