@@ -15,12 +15,16 @@ $('.mobile-menu__close').on('click', function (e) {
 	$('.mobile-menu').fadeOut();
 });
 
-// $('.js-example-basic-single').select2({
-// 	width: "100%"
-// });
-
-
-
+$('.go_to').click(function (e) {
+	e.preventDefault();
+	var scroll_el = $(this).attr('href');
+	if ($(scroll_el).length !== 0) {
+		$('html, body').animate({
+			scrollTop: $(scroll_el).offset().top
+		}, 500);
+	}
+	return false;
+});
 
 // активная ссылка меню
 $('.menu li a').each(function () {
